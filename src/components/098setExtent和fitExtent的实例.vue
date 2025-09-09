@@ -41,7 +41,7 @@
 			},
 			fitbyextent() {
 			   this.map.getView().fit(this.newextent, this.map.getSize(), {
-					padding: [200, 10, 20, 10]
+					padding: [20, 10, 20, 10]
 				}
 			   );
 			},			
