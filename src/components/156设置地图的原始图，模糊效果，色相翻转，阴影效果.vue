@@ -42,8 +42,7 @@ none
 <script>
 	import 'ol/ol.css';
 	import {Map,View} from 'ol'
-import TileLayer from 'ol/layer/Tile'
-  	import XYZ from "ol/source/XYZ";
+	import TileLayer from 'ol/layer/Tile'
 	import OSM from 'ol/source/OSM'
 	export default {
 		data() {
@@ -67,7 +66,7 @@ import TileLayer from 'ol/layer/Tile'
 			},
 			s() {
 				this.map.on('postcompose', (evt) => {
-					document.querySelector('canvas').style.filter = `drop-shadow(10px 0 5px #000)`;
+					document.querySelector('canvas').style.filter = `drop-shadow(0 0 5px #000)`;
 				});
 				this.map.updateSize();
 			},
@@ -80,9 +79,7 @@ import TileLayer from 'ol/layer/Tile'
    
 			initMap() {
 				this.osmLayer = new TileLayer({
-					source: new XYZ({
-								url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}'
-							})
+					source: new OSM(),
 				});
 				this.map = new Map({
 					target: "vue-openlayers",
