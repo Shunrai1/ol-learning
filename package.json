@@ -13,6 +13,7 @@
     "core-js": "^3.6.5",
     "d3-fetch": "^3.0.1",
     "dayjs": "^1.11.18",
+    "echarts": "^6.0.0",
     "element-ui": "^2.15.6",
     "file-saver": "^2.0.5",
     "json-loader": "^0.5.7",
